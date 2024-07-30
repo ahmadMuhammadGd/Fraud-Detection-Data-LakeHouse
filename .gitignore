@@ -1,0 +1,8 @@
+.git
+__pycache__
+dockerfile-livy
+dockerfile-livyOld
+test.py
+env
+*.jar
+test

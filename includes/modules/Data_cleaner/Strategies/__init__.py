@@ -1,0 +1,8 @@
+from modules.Data_cleaner.Strategies.base import CleaningStrategy
+from modules.Data_cleaner.Strategies.drop_duplicates import DropDuplicatesStrategy
+from modules.Data_cleaner.Strategies.drop_missing_values import DropMissingValuesStrategy
+from modules.Data_cleaner.Strategies.filter_negative_values import FilterNegativeValuesStrategy
+from modules.Data_cleaner.Strategies.validate_columns_type import ValidateColumnTypesStrategy
+from modules.Data_cleaner.Strategies.validate_date import ValidateDatesStrategy
+from modules.Data_cleaner.Strategies.validate_regex import ValidateRegexStrategy
+
