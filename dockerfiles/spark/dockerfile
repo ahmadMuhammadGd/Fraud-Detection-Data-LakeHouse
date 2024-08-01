@@ -1,0 +1,72 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# syntax=docker/dockerfile:1
+FROM python:3.10-bullseye
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    curl \
+    unzip \
+    openjdk-11-jdk \
+    ssh && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Optional env variables
+ENV SPARK_HOME=${SPARK_HOME:-"/opt/spark"}
+ENV PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.7-src.zip:$PYTHONPATH
+
+WORKDIR ${SPARK_HOME}
+
+ENV SPARK_VERSION=3.5.1
+ENV SPARK_MAJOR_VERSION=3.5
+ENV ICEBERG_VERSION=1.5.2
+
+# Download spark
+RUN mkdir -p ${SPARK_HOME} \
+ && curl https://dlcdn.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop3.tgz -o spark-${SPARK_VERSION}-bin-hadoop3.tgz \
+ && tar xvzf spark-${SPARK_VERSION}-bin-hadoop3.tgz --directory /opt/spark --strip-components 1 \
+ && rm -rf spark-${SPARK_VERSION}-bin-hadoop3.tgz
+
+# Download iceberg spark runtime and AWS bundle
+RUN curl https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12/${ICEBERG_VERSION}/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12-${ICEBERG_VERSION}.jar -Lo /opt/spark/jars/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12-${ICEBERG_VERSION}.jar
+RUN curl -s https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-aws-bundle/${ICEBERG_VERSION}/iceberg-aws-bundle-${ICEBERG_VERSION}.jar -Lo /opt/spark/jars/iceberg-aws-bundle-${ICEBERG_VERSION}.jar
+
+#download spark kafka runtime and kafka sql
+RUN curl -o ${SPARK_HOME}/jars/spark-sql-kafka-0-10_2.12-3.3.0.jar https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.0/spark-sql-kafka-0-10_2.12-3.3.0.jar
+RUN curl -o ${SPARK_HOME}/jars/spark-token-provider-kafka-0-10_2.12-3.3.0.jar https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0.jar
+RUN curl -o ${SPARK_HOME}/jars/kafka-clients-2.8.1.jar https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.1/kafka-clients-2.8.1.jar
+RUN curl -o ${SPARK_HOME}/jars/lz4-java-1.8.0.jar https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar
+RUN curl -o ${SPARK_HOME}/jars/snappy-java-1.1.8.4.jar https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.8.4/snappy-java-1.1.8.4.jar
+RUN curl -o ${SPARK_HOME}/jars/slf4j-api-1.7.32.jar https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar
+RUN curl -o ${SPARK_HOME}/jars/hadoop-client-runtime-3.3.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.2/hadoop-client-runtime-3.3.2.jar
+RUN curl -o ${SPARK_HOME}/jars/hadoop-client-api-3.3.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.2/hadoop-client-api-3.3.2.jar
+
+RUN curl -o ${SPARK_HOME}/jars/commons-pool2-2.11.1.jar https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
+
+RUN mkdir -p /home/iceberg/localwarehouse 
+RUN mkdir -p /home/iceberg/warehouse /home/iceberg/spark-events /home/iceberg
+
+# COPY spark-defaults.conf /opt/spark/conf
+ENV PATH="/opt/spark/sbin:/opt/spark/bin:${PATH}"
+
+RUN chmod u+x /opt/spark/sbin/* && \
+    chmod u+x /opt/spark/bin/*
+
+COPY dockerfiles/spark/entrypoint.sh .
+RUN chmod +x ${SPARK_HOME}/entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
