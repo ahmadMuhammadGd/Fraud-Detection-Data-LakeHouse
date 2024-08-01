@@ -1,0 +1,3 @@
+confluent_kafka==2.5.0
+Faker==26.1.0
+pyspark==3.5.1
