@@ -1,0 +1,703 @@
+24/08/01 01:36:19 INFO SparkContext: Running Spark version 3.5.1
+24/08/01 01:36:19 INFO SparkContext: OS info Linux, 6.5.0-45-generic, amd64
+24/08/01 01:36:19 INFO SparkContext: Java version 11.0.23
+24/08/01 01:36:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/08/01 01:36:20 INFO ResourceUtils: ==============================================================
+24/08/01 01:36:20 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/08/01 01:36:20 INFO ResourceUtils: ==============================================================
+24/08/01 01:36:20 INFO SparkContext: Submitted application: KafkaTransactionConsumer
+24/08/01 01:36:21 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/08/01 01:36:21 INFO ResourceProfile: Limiting resource is cpu
+24/08/01 01:36:21 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/08/01 01:36:21 INFO SecurityManager: Changing view acls to: root
+24/08/01 01:36:21 INFO SecurityManager: Changing modify acls to: root
+24/08/01 01:36:21 INFO SecurityManager: Changing view acls groups to: 
+24/08/01 01:36:21 INFO SecurityManager: Changing modify acls groups to: 
+24/08/01 01:36:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/08/01 01:36:22 INFO Utils: Successfully started service 'sparkDriver' on port 41921.
+24/08/01 01:36:23 INFO SparkEnv: Registering MapOutputTracker
+24/08/01 01:36:23 INFO SparkEnv: Registering BlockManagerMaster
+24/08/01 01:36:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/08/01 01:36:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/08/01 01:36:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/08/01 01:36:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0ed8a71b-1301-4fcd-b644-814f8f7174e4
+24/08/01 01:36:23 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/08/01 01:36:23 INFO SparkEnv: Registering OutputCommitCoordinator
+24/08/01 01:36:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/08/01 01:36:23 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+24/08/01 01:36:23 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+24/08/01 01:36:23 INFO Executor: Starting executor ID driver on host 86dbd5d64acb
+24/08/01 01:36:23 INFO Executor: OS info Linux, 6.5.0-45-generic, amd64
+24/08/01 01:36:23 INFO Executor: Java version 11.0.23
+24/08/01 01:36:23 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/08/01 01:36:23 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@f833887 for default.
+24/08/01 01:36:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35405.
+24/08/01 01:36:24 INFO NettyBlockTransferService: Server created on 86dbd5d64acb:35405
+24/08/01 01:36:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/08/01 01:36:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 86dbd5d64acb, 35405, None)
+24/08/01 01:36:24 INFO BlockManagerMasterEndpoint: Registering block manager 86dbd5d64acb:35405 with 434.4 MiB RAM, BlockManagerId(driver, 86dbd5d64acb, 35405, None)
+24/08/01 01:36:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 86dbd5d64acb, 35405, None)
+24/08/01 01:36:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 86dbd5d64acb, 35405, None)
+24/08/01 01:36:25 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/08/01 01:36:25 INFO SharedState: Warehouse path is 'file:/opt/spark/spark-warehouse'.
+24/08/01 01:36:33 INFO CodeGenerator: Code generated in 199.861513 ms
+24/08/01 01:36:33 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+24/08/01 01:36:33 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 8 output partitions
+24/08/01 01:36:33 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+24/08/01 01:36:33 INFO DAGScheduler: Parents of final stage: List()
+24/08/01 01:36:33 INFO DAGScheduler: Missing parents: List()
+24/08/01 01:36:33 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/08/01 01:36:33 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 20.3 KiB, free 434.4 MiB)
+24/08/01 01:36:33 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KiB, free 434.4 MiB)
+24/08/01 01:36:33 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 86dbd5d64acb:35405 (size: 9.8 KiB, free: 434.4 MiB)
+24/08/01 01:36:33 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+24/08/01 01:36:33 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+24/08/01 01:36:33 INFO TaskSchedulerImpl: Adding task set 0.0 with 8 tasks resource profile 0
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (86dbd5d64acb, executor driver, partition 0, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (86dbd5d64acb, executor driver, partition 1, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (86dbd5d64acb, executor driver, partition 2, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (86dbd5d64acb, executor driver, partition 3, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (86dbd5d64acb, executor driver, partition 4, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (86dbd5d64acb, executor driver, partition 5, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (86dbd5d64acb, executor driver, partition 6, PROCESS_LOCAL, 7595 bytes) 
+24/08/01 01:36:33 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (86dbd5d64acb, executor driver, partition 7, PROCESS_LOCAL, 8110 bytes) 
+24/08/01 01:36:33 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+24/08/01 01:36:33 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+24/08/01 01:36:33 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+24/08/01 01:36:33 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+24/08/01 01:36:33 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+24/08/01 01:36:33 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+24/08/01 01:36:33 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/08/01 01:36:33 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+24/08/01 01:36:35 INFO CodeGenerator: Code generated in 46.709793 ms
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1472, boot = 1259, init = 213, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1488, boot = 1255, init = 233, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1559, boot = 1263, init = 296, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1574, boot = 1267, init = 307, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1586, boot = 1250, init = 336, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1604, boot = 1273, init = 331, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1616, boot = 1280, init = 336, finish = 0
+24/08/01 01:36:35 INFO PythonRunner: Times: total = 1523, boot = 1283, init = 239, finish = 1
+24/08/01 01:36:36 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2755 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 1979 bytes result sent to driver
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2525 ms on 86dbd5d64acb (executor driver) (1/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 2565 ms on 86dbd5d64acb (executor driver) (2/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 2563 ms on 86dbd5d64acb (executor driver) (3/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 2562 ms on 86dbd5d64acb (executor driver) (4/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 2566 ms on 86dbd5d64acb (executor driver) (5/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 2566 ms on 86dbd5d64acb (executor driver) (6/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 2564 ms on 86dbd5d64acb (executor driver) (7/8)
+24/08/01 01:36:36 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2595 ms on 86dbd5d64acb (executor driver) (8/8)
+24/08/01 01:36:36 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/08/01 01:36:36 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 51769
+24/08/01 01:36:36 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 3.178 s
+24/08/01 01:36:36 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/08/01 01:36:36 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/08/01 01:36:36 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 3.316855 s
+24/08/01 01:36:38 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 86dbd5d64acb:35405 in memory (size: 9.8 KiB, free: 434.4 MiB)
+24/08/01 01:36:38 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+24/08/01 01:36:38 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+24/08/01 01:36:39 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8 resolved to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8.
+24/08/01 01:36:39 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/08/01 01:36:40 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/metadata using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/.metadata.c418fae1-8d16-4909-8a20-6191a0c8a9d2.tmp
+24/08/01 01:36:40 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/.metadata.c418fae1-8d16-4909-8a20-6191a0c8a9d2.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/metadata
+24/08/01 01:36:41 INFO MicroBatchExecution: Starting [id = 88898a75-7e68-4db0-87d0-07ae0442f168, runId = 2f3d8052-f631-48b1-be79-b5967371a418]. Use file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8 to store the query checkpoint.
+24/08/01 01:36:41 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@45b303bb] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@4d96b199]
+24/08/01 01:36:42 INFO OffsetSeqLog: BatchIds found from listing: 
+24/08/01 01:36:42 INFO OffsetSeqLog: BatchIds found from listing: 
+24/08/01 01:36:42 INFO MicroBatchExecution: Starting new streaming query.
+24/08/01 01:36:42 INFO MicroBatchExecution: Stream started from {}
+24/08/01 01:36:42 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/08/01 01:36:42 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+24/08/01 01:36:42 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+24/08/01 01:36:42 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+24/08/01 01:36:42 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+24/08/01 01:36:42 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+24/08/01 01:36:42 INFO AppInfoParser: Kafka version: 2.8.1
+24/08/01 01:36:42 INFO AppInfoParser: Kafka commitId: 839b886f9b732b15
+24/08/01 01:36:42 INFO AppInfoParser: Kafka startTimeMs: 1722476202978
+24/08/01 01:36:44 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/sources/0/0 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/sources/0/.0.1645effe-2340-4ea1-8e6f-4654ffdd0ca6.tmp
+24/08/01 01:36:44 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/sources/0/.0.1645effe-2340-4ea1-8e6f-4654ffdd0ca6.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/sources/0/0
+24/08/01 01:36:44 INFO KafkaMicroBatchStream: Initial offsets: {"bank-transactions":{"0":2854}}
+24/08/01 01:36:44 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/0 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.0.19d12fb8-e583-456e-ade4-b22387940733.tmp
+24/08/01 01:36:44 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.0.19d12fb8-e583-456e-ade4-b22387940733.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/0
+24/08/01 01:36:44 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1722476204699,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/08/01 01:36:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:46 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:46 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:46 INFO CodeGenerator: Code generated in 24.06813 ms
+24/08/01 01:36:46 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/08/01 01:36:46 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/08/01 01:36:46 INFO DAGScheduler: Got job 1 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/08/01 01:36:46 INFO DAGScheduler: Final stage: ResultStage 1 (start at NativeMethodAccessorImpl.java:0)
+24/08/01 01:36:46 INFO DAGScheduler: Parents of final stage: List()
+24/08/01 01:36:46 INFO DAGScheduler: Missing parents: List()
+24/08/01 01:36:46 INFO DAGScheduler: Submitting ResultStage 1 (ParallelCollectionRDD[15] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/08/01 01:36:46 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.4 KiB, free 434.4 MiB)
+24/08/01 01:36:46 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2035.0 B, free 434.4 MiB)
+24/08/01 01:36:46 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 86dbd5d64acb:35405 (size: 2035.0 B, free: 434.4 MiB)
+24/08/01 01:36:46 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+24/08/01 01:36:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ParallelCollectionRDD[15] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/08/01 01:36:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+24/08/01 01:36:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 8) (86dbd5d64acb, executor driver, partition 0, PROCESS_LOCAL, 7636 bytes) 
+24/08/01 01:36:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 8)
+24/08/01 01:36:46 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/08/01 01:36:46 INFO DataWritingSparkTask: Committed partition 0 (task 8, attempt 0, stage 1.0)
+24/08/01 01:36:46 INFO Executor: Finished task 0.0 in stage 1.0 (TID 8). 1252 bytes result sent to driver
+24/08/01 01:36:46 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 8) in 76 ms on 86dbd5d64acb (executor driver) (1/1)
+24/08/01 01:36:46 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/08/01 01:36:46 INFO DAGScheduler: ResultStage 1 (start at NativeMethodAccessorImpl.java:0) finished in 0.096 s
+24/08/01 01:36:46 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/08/01 01:36:46 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/08/01 01:36:46 INFO DAGScheduler: Job 1 finished: start at NativeMethodAccessorImpl.java:0, took 0.110713 s
+24/08/01 01:36:46 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++---------+-----------+---------+------------------+--------------------+----------------+--------------+--------------------+----------------+
+|device_id|receiver_id|sender_id|transaction_amount|transaction_currency|transaction_date|transaction_id|transaction_location|transaction_type|
++---------+-----------+---------+------------------+--------------------+----------------+--------------+--------------------+----------------+
++---------+-----------+---------+------------------+--------------------+----------------+--------------+--------------------+----------------+
+
+24/08/01 01:36:46 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/08/01 01:36:46 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/0 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.0.64a8dcad-33b2-4cea-821f-3031d02f267c.tmp
+24/08/01 01:36:46 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.0.64a8dcad-33b2-4cea-821f-3031d02f267c.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/0
+24/08/01 01:36:47 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "88898a75-7e68-4db0-87d0-07ae0442f168",
+  "runId" : "2f3d8052-f631-48b1-be79-b5967371a418",
+  "name" : null,
+  "timestamp" : "2024-08-01T01:36:42.019Z",
+  "batchId" : 0,
+  "numInputRows" : 0,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 0.0,
+  "durationMs" : {
+    "addBatch" : 1098,
+    "commitOffsets" : 102,
+    "getBatch" : 60,
+    "latestOffset" : 2569,
+    "queryPlanning" : 913,
+    "triggerExecution" : 4946,
+    "walCommit" : 82
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[bank-transactions]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "bank-transactions" : {
+        "0" : 2854
+      }
+    },
+    "latestOffset" : {
+      "bank-transactions" : {
+        "0" : 2854
+      }
+    },
+    "numInputRows" : 0,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 0.0,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@2ca21fa6",
+    "numOutputRows" : 0
+  }
+}
+24/08/01 01:36:54 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/1 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.1.2231afb2-073a-4335-ba12-ffdfbbcf6d95.tmp
+24/08/01 01:36:54 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.1.2231afb2-073a-4335-ba12-ffdfbbcf6d95.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/1
+24/08/01 01:36:54 INFO MicroBatchExecution: Committed offsets for batch 1. Metadata OffsetSeqMetadata(0,1722476214282,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:54 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/08/01 01:36:54 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/08/01 01:36:54 INFO DAGScheduler: Got job 2 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/08/01 01:36:54 INFO DAGScheduler: Final stage: ResultStage 2 (start at NativeMethodAccessorImpl.java:0)
+24/08/01 01:36:54 INFO DAGScheduler: Parents of final stage: List()
+24/08/01 01:36:54 INFO DAGScheduler: Missing parents: List()
+24/08/01 01:36:54 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[19] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/08/01 01:36:54 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 25.1 KiB, free 434.4 MiB)
+24/08/01 01:36:54 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 10.8 KiB, free 434.4 MiB)
+24/08/01 01:36:54 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 86dbd5d64acb:35405 (size: 10.8 KiB, free: 434.4 MiB)
+24/08/01 01:36:54 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 86dbd5d64acb:35405 in memory (size: 2035.0 B, free: 434.4 MiB)
+24/08/01 01:36:54 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/08/01 01:36:54 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[19] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/08/01 01:36:54 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+24/08/01 01:36:54 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 9) (86dbd5d64acb, executor driver, partition 0, PROCESS_LOCAL, 8561 bytes) 
+24/08/01 01:36:54 INFO Executor: Running task 0.0 in stage 2.0 (TID 9)
+24/08/01 01:36:55 INFO CodeGenerator: Code generated in 240.376661 ms
+24/08/01 01:36:55 INFO CodeGenerator: Code generated in 92.264759 ms
+24/08/01 01:36:55 INFO CodeGenerator: Code generated in 15.37985 ms
+24/08/01 01:36:55 INFO CodeGenerator: Code generated in 17.961515 ms
+24/08/01 01:36:56 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+24/08/01 01:36:56 INFO AppInfoParser: Kafka version: 2.8.1
+24/08/01 01:36:56 INFO AppInfoParser: Kafka commitId: 839b886f9b732b15
+24/08/01 01:36:56 INFO AppInfoParser: Kafka startTimeMs: 1722476216393
+24/08/01 01:36:56 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Subscribed to partition(s): bank-transactions-0
+24/08/01 01:36:56 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Seeking to offset 2854 for partition bank-transactions-0
+24/08/01 01:36:56 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Cluster ID: PpxHjma_QPm7ginlGcjHYg
+24/08/01 01:36:56 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Seeking to EARLIEST offset of partition bank-transactions-0
+24/08/01 01:36:57 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Resetting offset for partition bank-transactions-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=0}}.
+24/08/01 01:36:57 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Seeking to LATEST offset of partition bank-transactions-0
+24/08/01 01:36:57 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1, groupId=spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor] Resetting offset for partition bank-transactions-0 to position FetchPosition{offset=3060, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=0}}.
+24/08/01 01:36:57 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/08/01 01:36:57 INFO DataWritingSparkTask: Committed partition 0 (task 9, attempt 0, stage 2.0)
+24/08/01 01:36:57 INFO Executor: Finished task 0.0 in stage 2.0 (TID 9). 4051 bytes result sent to driver
+24/08/01 01:36:57 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 9) in 2787 ms on 86dbd5d64acb (executor driver) (1/1)
+24/08/01 01:36:57 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/08/01 01:36:57 INFO DAGScheduler: ResultStage 2 (start at NativeMethodAccessorImpl.java:0) finished in 2.936 s
+24/08/01 01:36:57 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/08/01 01:36:57 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+24/08/01 01:36:57 INFO DAGScheduler: Job 2 finished: start at NativeMethodAccessorImpl.java:0, took 2.950088 s
+24/08/01 01:36:57 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+-------------------------------------------
+Batch: 1
+-------------------------------------------
+24/08/01 01:36:57 INFO CodeGenerator: Code generated in 8.14541 ms
+24/08/01 01:36:57 INFO CodeGenerator: Code generated in 14.17547 ms
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+|           device_id|         receiver_id|           sender_id|transaction_amount|transaction_currency|    transaction_date|      transaction_id|transaction_location|transaction_type|
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+|991c587a-606f-43c...|fd40b9b4-d8da-4de...|b9ea724d-dd8d-4a4...|                84|                 USD|2024-06-10T02:05:...|90dcb41f-b193-414...|      Kennethchester|        purchase|
+|3e14e530-d762-4f6...|f9183ff7-42e0-470...|0c477b22-5102-483...|                68|                 USD|2024-04-12T06:26:...|47139626-cb0e-440...|         Watsonhaven|        purchase|
+|752ff8af-0255-4ff...|f9183ff7-42e0-470...|c92f79bf-f591-421...|                16|                 USD|2024-07-07T15:07:...|76228473-d391-405...|          Jordanberg|        transfer|
+|86a91a52-9a61-4b6...|b9ea724d-dd8d-4a4...|434358d3-2856-4c3...|                 6|                 USD|2024-01-21T05:51:...|1cb3698b-43fe-4e7...|        South Pamela|        transfer|
+|9fb6af36-7493-4c5...|f9183ff7-42e0-470...|b9ea724d-dd8d-4a4...|                32|                 USD|2024-06-17T11:43:...|07c28f88-d950-468...|      New Ashleyberg|        transfer|
+|fed38f3c-6467-4f7...|f9183ff7-42e0-470...|d8989514-4046-45d...|                64|                 USD|2024-07-18T23:23:...|a34fb5c9-55ff-422...|         Anthonystad|        transfer|
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+
+24/08/01 01:36:57 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/08/01 01:36:57 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/1 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.1.6ae00aad-59b4-455a-95f3-69274b3c59e4.tmp
+24/08/01 01:36:57 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.1.6ae00aad-59b4-455a-95f3-69274b3c59e4.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/1
+24/08/01 01:36:57 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "88898a75-7e68-4db0-87d0-07ae0442f168",
+  "runId" : "2f3d8052-f631-48b1-be79-b5967371a418",
+  "name" : null,
+  "timestamp" : "2024-08-01T01:36:54.280Z",
+  "batchId" : 1,
+  "numInputRows" : 6,
+  "inputRowsPerSecond" : 461.53846153846155,
+  "processedRowsPerSecond" : 1.7133066818960596,
+  "durationMs" : {
+    "addBatch" : 3246,
+    "commitOffsets" : 44,
+    "getBatch" : 0,
+    "latestOffset" : 2,
+    "queryPlanning" : 81,
+    "triggerExecution" : 3502,
+    "walCommit" : 129
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[bank-transactions]]",
+    "startOffset" : {
+      "bank-transactions" : {
+        "0" : 2854
+      }
+    },
+    "endOffset" : {
+      "bank-transactions" : {
+        "0" : 2860
+      }
+    },
+    "latestOffset" : {
+      "bank-transactions" : {
+        "0" : 2860
+      }
+    },
+    "numInputRows" : 6,
+    "inputRowsPerSecond" : 461.53846153846155,
+    "processedRowsPerSecond" : 1.7133066818960596,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@2ca21fa6",
+    "numOutputRows" : 6
+  }
+}
+24/08/01 01:36:57 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/2 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.2.99a2ca95-db15-4acb-a77a-cbf70c42fd78.tmp
+24/08/01 01:36:57 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/.2.99a2ca95-db15-4acb-a77a-cbf70c42fd78.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/offsets/2
+24/08/01 01:36:57 INFO MicroBatchExecution: Committed offsets for batch 2. Metadata OffsetSeqMetadata(0,1722476217786,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/08/01 01:36:57 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 2, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/08/01 01:36:57 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/08/01 01:36:57 INFO DAGScheduler: Got job 3 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/08/01 01:36:57 INFO DAGScheduler: Final stage: ResultStage 3 (start at NativeMethodAccessorImpl.java:0)
+24/08/01 01:36:57 INFO DAGScheduler: Parents of final stage: List()
+24/08/01 01:36:57 INFO DAGScheduler: Missing parents: List()
+24/08/01 01:36:57 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[23] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/08/01 01:36:57 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 25.1 KiB, free 434.3 MiB)
+24/08/01 01:36:57 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 434.3 MiB)
+24/08/01 01:36:57 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 86dbd5d64acb:35405 (size: 10.7 KiB, free: 434.4 MiB)
+24/08/01 01:36:57 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 86dbd5d64acb:35405 in memory (size: 10.8 KiB, free: 434.4 MiB)
+24/08/01 01:36:57 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+24/08/01 01:36:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[23] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/08/01 01:36:57 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+24/08/01 01:36:57 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 10) (86dbd5d64acb, executor driver, partition 0, PROCESS_LOCAL, 8561 bytes) 
+24/08/01 01:36:57 INFO Executor: Running task 0.0 in stage 3.0 (TID 10)
+24/08/01 01:36:58 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/08/01 01:36:58 INFO DataWritingSparkTask: Committed partition 0 (task 10, attempt 0, stage 3.0)
+24/08/01 01:36:58 INFO Executor: Finished task 0.0 in stage 3.0 (TID 10). 67204 bytes result sent to driver
+24/08/01 01:36:58 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 10) in 111 ms on 86dbd5d64acb (executor driver) (1/1)
+24/08/01 01:36:58 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+24/08/01 01:36:58 INFO DAGScheduler: ResultStage 3 (start at NativeMethodAccessorImpl.java:0) finished in 0.141 s
+24/08/01 01:36:58 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/08/01 01:36:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+24/08/01 01:36:58 INFO DAGScheduler: Job 3 finished: start at NativeMethodAccessorImpl.java:0, took 0.146383 s
+24/08/01 01:36:58 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 2, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+|           device_id|         receiver_id|           sender_id|transaction_amount|transaction_currency|    transaction_date|      transaction_id|transaction_location|transaction_type|
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+|65f95383-4a09-4eb...|fd40b9b4-d8da-4de...|e8f95585-dae0-41a...|                84|                 USD|2024-04-06T10:11:...|4a1940c5-604c-43a...|        Rebeccahaven|        transfer|
+|359066a3-949e-44e...|b9ea724d-dd8d-4a4...|ae7de6a8-0030-458...|                95|                 USD|2024-06-06T18:17:...|afe40a3e-1c69-490...|         Oliverhaven|        purchase|
+|e5c61e78-86b0-449...|f9183ff7-42e0-470...|fd40b9b4-d8da-4de...|                 9|                 USD|2024-01-12T01:34:...|9953db6d-3576-476...|        Williamsfort|        transfer|
+|eae47587-087c-4dd...|f9183ff7-42e0-470...|1730e1bd-ecac-483...|                34|                 USD|2024-05-26T00:21:...|28176367-43b6-491...|           West Lisa|        transfer|
+|117b6766-40b7-4f9...|fd40b9b4-d8da-4de...|f9183ff7-42e0-470...|                51|                 USD|2024-02-14T22:24:...|0419bbb5-0e32-434...|       Jeremiahshire|        purchase|
+|482d6f16-0154-45b...|fd40b9b4-d8da-4de...|fe53800e-64f2-40b...|                30|                 USD|2024-01-02T11:52:...|79204403-09a8-497...|      Lake Jamestown|        transfer|
+|d68792a1-b539-49c...|fd40b9b4-d8da-4de...|74d14d5e-aa86-440...|                58|                 USD|2024-02-19T08:16:...|693e084e-6754-4cd...|         Marychester|        purchase|
+|679d9e91-bbb2-41a...|b9ea724d-dd8d-4a4...|fd40b9b4-d8da-4de...|                43|                 USD|2024-02-16T05:55:...|781e730b-2ce6-438...|    West Michaeltown|        purchase|
+|cb8c965a-9f85-48d...|b9ea724d-dd8d-4a4...|fd40b9b4-d8da-4de...|                59|                 USD|2024-06-17T06:20:...|379b93a5-de16-4d0...|     North Kevinport|        transfer|
+|4990b6ab-222f-469...|fd40b9b4-d8da-4de...|b8da8842-530a-4f6...|                23|                 USD|2024-01-30T15:12:...|9490b79f-4576-48d...| South Austinchester|        purchase|
+|81a5d063-eeb6-427...|fd40b9b4-d8da-4de...|4dd78481-719d-46f...|                 1|                 USD|2024-07-23T08:07:...|cea10354-0881-4b6...|   Lake Michellebury|        purchase|
+|f402cd42-80c2-43a...|b9ea724d-dd8d-4a4...|f9183ff7-42e0-470...|                19|                 USD|2024-03-30T18:32:...|cbc9e431-b6c6-4aa...|        Bradfordport|        purchase|
+|378903a7-59d5-40a...|b9ea724d-dd8d-4a4...|66991ffc-ed93-43c...|                26|                 USD|2024-05-23T16:36:...|a2d0f422-104e-45c...|        New Patricia|        purchase|
+|4a410c52-ebbc-433...|f9183ff7-42e0-470...|b9ea724d-dd8d-4a4...|                58|                 USD|2024-01-28T01:21:...|fca6f723-78bb-453...|          Lake Jason|        transfer|
+|b69c7187-5e30-447...|f9183ff7-42e0-470...|4dbed248-31c0-427...|                 6|                 USD|2024-03-16T20:37:...|62360108-397a-469...|          Arnoldside|        transfer|
+|11dd5bb5-bd00-42c...|fd40b9b4-d8da-4de...|96a24746-e28d-448...|                46|                 USD|2024-02-06T12:00:...|8279a9f0-d2bd-4e2...|       Jenniferville|        purchase|
+|6c71974e-f688-418...|f9183ff7-42e0-470...|fd40b9b4-d8da-4de...|                25|                 USD|2024-06-19T19:12:...|85d22cbe-1db7-496...|           Rogerfurt|        transfer|
+|8b7c1432-3bb7-417...|fd40b9b4-d8da-4de...|f9183ff7-42e0-470...|                95|                 USD|2024-05-17T23:46:...|affd4daf-9d06-473...|      Christopherton|        purchase|
+|90b935e6-cdb4-455...|e06b23ee-35fb-4d6...|b9ea724d-dd8d-4a4...|                23|                 USD|2024-01-22T23:24:...|756c9611-f6a5-48c...|          Larrymouth|        purchase|
+|db6cf92d-154d-4de...|fd40b9b4-d8da-4de...|f9183ff7-42e0-470...|                 5|                 USD|2024-06-07T22:01:...|e4125c8b-f286-472...|    New Samanthaland|        transfer|
++--------------------+--------------------+--------------------+------------------+--------------------+--------------------+--------------------+--------------------+----------------+
+only showing top 20 rows
+
+24/08/01 01:36:58 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 2, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/08/01 01:36:58 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/2 using temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.2.f5893831-46f8-4b18-96d6-89aaaaeff1fc.tmp
+24/08/01 01:36:58 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/.2.f5893831-46f8-4b18-96d6-89aaaaeff1fc.tmp to file:/tmp/temporary-99918a8d-5262-490b-b581-2289dcab09e8/commits/2
+24/08/01 01:36:58 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "88898a75-7e68-4db0-87d0-07ae0442f168",
+  "runId" : "2f3d8052-f631-48b1-be79-b5967371a418",
+  "name" : null,
+  "timestamp" : "2024-08-01T01:36:57.784Z",
+  "batchId" : 2,
+  "numInputRows" : 200,
+  "inputRowsPerSecond" : 57.077625570776256,
+  "processedRowsPerSecond" : 457.66590389016017,
+  "durationMs" : {
+    "addBatch" : 342,
+    "commitOffsets" : 31,
+    "getBatch" : 0,
+    "latestOffset" : 2,
+    "queryPlanning" : 34,
+    "triggerExecution" : 437,
+    "walCommit" : 27
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[bank-transactions]]",
+    "startOffset" : {
+      "bank-transactions" : {
+        "0" : 2860
+      }
+    },
+    "endOffset" : {
+      "bank-transactions" : {
+        "0" : 3060
+      }
+    },
+    "latestOffset" : {
+      "bank-transactions" : {
+        "0" : 3060
+      }
+    },
+    "numInputRows" : 200,
+    "inputRowsPerSecond" : 57.077625570776256,
+    "processedRowsPerSecond" : 457.66590389016017,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@2ca21fa6",
+    "numOutputRows" : 200
+  }
+}
+24/08/01 01:37:05 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 86dbd5d64acb:35405 in memory (size: 10.7 KiB, free: 434.4 MiB)
+24/08/01 01:37:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:37:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:37:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:37:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:37:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:37:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:38:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:39:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:40:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:41:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:42:55 INFO Metrics: Metrics scheduler closed
+24/08/01 01:42:55 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+24/08/01 01:42:55 INFO Metrics: Metrics reporters closed
+24/08/01 01:42:55 INFO AppInfoParser: App info kafka.consumer for consumer-spark-kafka-source-68286a48-508c-4ba2-b8ae-d9079cd430b6--1512122997-executor-1 unregistered
+24/08/01 01:42:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:43:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:44:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:45:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:46:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:47:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:48:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:49:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:50:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:51:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:52:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:53:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:54:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:55:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/08/01 01:55:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
