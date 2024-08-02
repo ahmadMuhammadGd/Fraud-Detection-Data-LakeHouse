@@ -45,7 +45,7 @@ RUN mkdir -p ${SPARK_HOME} \
 RUN curl https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12/${ICEBERG_VERSION}/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12-${ICEBERG_VERSION}.jar -Lo /opt/spark/jars/iceberg-spark-runtime-${SPARK_MAJOR_VERSION}_2.12-${ICEBERG_VERSION}.jar
 RUN curl -s https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-aws-bundle/${ICEBERG_VERSION}/iceberg-aws-bundle-${ICEBERG_VERSION}.jar -Lo /opt/spark/jars/iceberg-aws-bundle-${ICEBERG_VERSION}.jar
 
-#download spark kafka runtime and kafka sql
+# Download spark kafka runtime and kafka sql
 RUN curl -o ${SPARK_HOME}/jars/spark-sql-kafka-0-10_2.12-3.3.0.jar https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.0/spark-sql-kafka-0-10_2.12-3.3.0.jar
 RUN curl -o ${SPARK_HOME}/jars/spark-token-provider-kafka-0-10_2.12-3.3.0.jar https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0.jar
 RUN curl -o ${SPARK_HOME}/jars/kafka-clients-2.8.1.jar https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.1/kafka-clients-2.8.1.jar
@@ -56,6 +56,9 @@ RUN curl -o ${SPARK_HOME}/jars/hadoop-client-runtime-3.3.2.jar https://repo1.mav
 RUN curl -o ${SPARK_HOME}/jars/hadoop-client-api-3.3.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.2/hadoop-client-api-3.3.2.jar
 
 RUN curl -o ${SPARK_HOME}/jars/commons-pool2-2.11.1.jar https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
+
+# Download nessi package
+RUN curl -o ${SPARK_HOME}/jars/nessie-spark-extensions-3.5_2.12-0.94.4.jar https://repo1.maven.org/maven2/org/projectnessie/nessie-integrations/nessie-spark-extensions-3.5_2.12/0.94.4/nessie-spark-extensions-3.5_2.12-0.94.4.jar
 
 RUN mkdir -p /home/iceberg/localwarehouse 
 RUN mkdir -p /home/iceberg/warehouse /home/iceberg/spark-events /home/iceberg
