@@ -32,6 +32,6 @@ class IceBergNessieMinio:
             .set("spark.sql.catalog.nessie.s3.endpoint"                 , self.minio_endpoint) \
             .set("spark.sql.catalog.nessie.io-impl"                     , "org.apache.iceberg.aws.s3.S3FileIO") \
             .set("spark.hadoop.fs.s3a.access.key"                       , self.minio_access_key) \
-            .set("spark.hadoop.fs.s3a.secret.key"                       , self.minio_secret_key)
+            .set("spark.hadoop.fs.s3a.secret.key"                       , self.minio_secret_key)\
 
         return conf

@@ -9,8 +9,11 @@ class CleaningPipeline:
         self.strategies = []
         self.df = None
 
-    def add_strategy(self, strategy: CleaningStrategy):
-        self.strategies.append(strategy)
+    def add_strategy(self, strategy: CleaningStrategy | list[CleaningStrategy]):
+        if type(strategy) == list:
+            [self.strategies.append(s) for s in strategy]
+        elif type(strategy) == CleaningStrategy:
+            self.strategies.append(strategy)
 
     def set_dataframe(self, df: DataFrame):
         self.df = df.withColumn('__index', row_number().over(

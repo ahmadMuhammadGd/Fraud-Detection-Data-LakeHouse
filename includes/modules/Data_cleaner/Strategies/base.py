@@ -2,7 +2,7 @@ from pyspark.sql import DataFrame
 from modules.logger.logger import Logger 
 
 class CleaningStrategy:
-    def __init__(self, columns: list):
+    def __init__(self, columns: list = None):
         self.columns = columns
         self.errors = []
         self.logger = Logger()
