@@ -11,6 +11,7 @@ services:
     container_name: spark
     volumes:
       - ./includes:/includes
+      - ./scripts-variables.env:/scripts-variables.env
     ports:
       - 8888:8888
       - 8080:8080
@@ -56,14 +57,16 @@ services:
     networks:
       - solution-network
 
-  # dremio:
-  #   platform: linux/x86_64
-  #   container_name: dremio
-  #   image: dremio/dremio-oss:latest
-  #   ports:
-  #     - 9047:9047
-  #     - 31010:31010
-  #     - 32010:32010
+  dremio:
+    platform: linux/x86_64
+    container_name: dremio
+    image: dremio/dremio-oss:latest
+    ports:
+      - 9047:9047
+      - 31010:31010
+      - 32010:32010
+    networks:
+      - solution-network
 
 # Kafka compose source: https://medium.com/@erkndmrl/kafka-cluster-with-docker-compose-5864d50f677e
   zookeeper:
