@@ -12,6 +12,5 @@ CREATE TABLE IF NOT EXISTS nessie.silver_transactions (
     transaction_type        STRING,
     transaction_location    STRING,
     device_id               STRING
-PARTITION 
 ) USING iceberg
-PARTITIONED BY (transaction_month, transaction_hour);
+PARTITIONED BY (transaction_date)

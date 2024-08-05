@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS nessie.bronz_raw_transactions (
     transaction_location    STRING,
     device_id               STRING
 ) USING iceberg
-PARTITIONED BY (MONTH(transaction_datetime), HOUR(transaction_datetime));
+PARTITIONED BY (DATE(transaction_datetime))

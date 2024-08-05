@@ -6,6 +6,6 @@ CREATE TABLE IF NOT EXISTS nessie.bronz_raw_clients (
     c_address               STRING,
     birth_date              DATE,
     client_id               STRING,
-    registration_date       TIMESTAMP,
+    registration_datetime   TIMESTAMP
 ) USING iceberg
-PARTITIONED BY (MONTH(registration_date))
+PARTITIONED BY (MONTH(registration_datetime))
