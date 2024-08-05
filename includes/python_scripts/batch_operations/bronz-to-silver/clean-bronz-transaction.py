@@ -13,28 +13,41 @@ from includes.modules.Data_cleaner.Strategies import (
 from includes.modules.Data_cleaner.Interface import CleaningPipeline
 
 spark = init_spark_session(app_name="clean bronz transactions")
-
+sc = spark.sparkContext
+sc.setLogLevel("WARN")
 try:
     batch = spark.sql("""
-    WITH add_date_col AS (
-        SELECT
-            *,
-            CAST (transaction_datetime as DATE) AS transaction_date
-        FROM
-            nessie.bronz_raw_transactions
+        WITH max_silver_date AS (
+            SELECT 
+                COALESCE(MAX(transaction_date), DATE '1970-01-01') AS max_date 
+            FROM 
+                nessie.silver_transactions
+        ),
+        batch_raw_trans AS (
+            SELECT 
+                *
+            FROM 
+                nessie.bronz_raw_transactions AS b
+            WHERE 
+                CAST(b.transaction_datetime AS DATE) > (SELECT max_date FROM max_silver_date)
+        )
+        SELECT 
+            b.*
+        FROM 
+            batch_raw_trans AS b
+        LEFT JOIN 
+            nessie.silver_transactions AS s
+        ON 
+            b.transaction_id = s.transaction_id
+            AND s.transaction_date >= (SELECT max_date FROM max_silver_date)
         WHERE 
-            transaction_datetime IS NOT NULL
-    )
-    SELECT *
-    FROM 
-        (
-            SELECT *,
-                RANK() OVER (ORDER BY transaction_date DESC) as rnk
-            FROM add_date_col
-        ) rankedDates
-    WHERE 
-        rankedDates.rnk = 1;
+            s.transaction_id IS NULL;
     """)
+    
+    batch.show()
+
+    if batch is None:
+        raise ValueError("The DataFrame 'batch' is None. Check the data source and distination.")
 
     cleaner = CleaningPipeline()
     cleaner.set_dataframe(df=batch)
@@ -78,11 +91,11 @@ try:
         transaction_location,
         device_id
     FROM
-        transactions_temp_view AS t
+        transactions_temp_view v
     LEFT JOIN
-        nessie.months_lookup AS m
-    ON
-        MONTH(t.transaction_datetime) = m.id
+        nessie.months_lookup as m
+    ON 
+        m.id = MONTH(v.transaction_datetime)
     """)
 
     logger.info("Data cleaning and writing to Silver layer completed successfully.")
