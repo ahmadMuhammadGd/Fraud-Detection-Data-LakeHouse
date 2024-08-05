@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS nessie.bronz_raw_clients (
     client_id               STRING,
     registration_date       TIMESTAMP,
 ) USING iceberg
-PARTITIONED BY (DAY(registration_date))
+PARTITIONED BY (MONTH(registration_date))
