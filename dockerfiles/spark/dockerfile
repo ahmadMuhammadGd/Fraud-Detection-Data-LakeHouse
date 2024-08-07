@@ -20,8 +20,9 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     curl \
     unzip \
-    openjdk-11-jdk \
-    ssh && \
+    openssh-server \
+    sudo \
+    openjdk-11-jdk && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -54,7 +55,6 @@ RUN curl -o ${SPARK_HOME}/jars/snappy-java-1.1.8.4.jar https://repo1.maven.org/m
 RUN curl -o ${SPARK_HOME}/jars/slf4j-api-1.7.32.jar https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar
 RUN curl -o ${SPARK_HOME}/jars/hadoop-client-runtime-3.3.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.2/hadoop-client-runtime-3.3.2.jar
 RUN curl -o ${SPARK_HOME}/jars/hadoop-client-api-3.3.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.2/hadoop-client-api-3.3.2.jar
-
 RUN curl -o ${SPARK_HOME}/jars/commons-pool2-2.11.1.jar https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
 
 # Download nessi package
@@ -63,13 +63,21 @@ RUN curl -o ${SPARK_HOME}/jars/nessie-spark-extensions-3.5_2.12-0.94.4.jar https
 RUN mkdir -p /home/iceberg/localwarehouse 
 RUN mkdir -p /home/iceberg/warehouse /home/iceberg/spark-events /home/iceberg
 
-# COPY spark-defaults.conf /opt/spark/conf
 ENV PATH="/opt/spark/sbin:/opt/spark/bin:${PATH}"
 
 RUN chmod u+x /opt/spark/sbin/* && \
     chmod u+x /opt/spark/bin/*
 
+    
+    
+# SSH confiurations
+RUN useradd --uid 1001 --create-home --shell /bin/bash --user-group me && \
+echo 'me:changeme' | chpasswd && \
+echo 'me ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/me && \
+chown -R me:me /opt/spark
+
 COPY dockerfiles/spark/entrypoint.sh .
 RUN chmod +x ${SPARK_HOME}/entrypoint.sh
+USER me
 
 ENTRYPOINT ["./entrypoint.sh"]
